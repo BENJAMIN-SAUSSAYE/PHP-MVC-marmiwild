@@ -1,0 +1,25 @@
+.mess-warning {
+    width: 100%;
+    margin: var(--spaccing1) auto;
+    padding: var(--spaccing2);
+    border: 2px solid var(--dark-color);
+    border-radius: var(--border-radius);
+    background-color: var(--light-color);
+    box-shadow: var(--box-shadow);
+    color: var(--warning-color);
+    letter-spacing: calc(var(--font-size)/4);
+}
+
+.mess-warning ul li {
+    display: flex;
+    list-style: none;
+    justify-content: flex-start;
+    align-items: center;
+    gap: var(--spaccing1);
+    letter-spacing: 0.3rem;
+    font-weight: 400;
+}
+
+.mess-warning ul li>svg {
+    fill: var(--warning-color);
+}

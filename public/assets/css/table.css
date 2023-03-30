@@ -1,0 +1,84 @@
+.datas-container {
+    --width-datas: 65vw;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: var(--width-datas);
+
+    gap: var(--spaccing1);
+    margin: var(--spaccing1) auto;
+    font-family: var(--fontfamily-text);
+    font-size: var(--font-size1);
+    padding: var(--spaccing2);
+    /*
+    border: 1px solid var(--medium-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    */
+}
+
+.datas-container table {
+    margin: var(--spaccing2);
+    display: inline-table;
+    width: 100%;
+    text-align: left;
+    box-shadow: var(--box-shadow);
+    border-collapse: collapse;
+    border-radius: var(--border-radius);
+}
+
+.datas-container table thead {
+    width: 100%;
+    height: 20px;
+
+}
+
+.datas-container table thead tr:first-child {
+    font-size: var(--font-size2);
+    text-align: center;
+    font-style: italic;
+}
+
+.datas-container table thead tr:last-child {
+    background-color: rgb(56, 56, 56);
+    color: white;
+    font-size: var(--font-size2);
+}
+
+.datas-container table thead {
+    width: 100%;
+    height: 40px;
+    background-color: var(--primary-color);
+}
+
+.datas-container table tbody {
+    height: 200px;
+    width: 100%;
+    overflow-y: auto;
+    /* Trigger vertical scroll    */
+    overflow-x: hidden;
+    /* Hide the horizontal scroll */
+    font-size: var(--font-size1);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.datas-container table th,
+.datas-container table td {
+    padding: var(--spaccing2);
+}
+
+
+.datas-container table tr {
+    width: 100%;
+    height: 25px;
+}
+
+.datas-container table tbody tr:nth-child(odd) {
+    background-color: rgb(175, 175, 175);
+}
+
+.datas-container table tbody tr:nth-child(even) {
+    background-color: rgb(172, 195, 243);
+}

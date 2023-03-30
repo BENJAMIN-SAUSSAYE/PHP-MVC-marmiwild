@@ -1,0 +1,90 @@
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(var(--section-max-width), 1fr));
+    gap: var(--spaccing3);
+    color: var(--light-color);
+    font-family: var(--fontfamily-text);
+    font-size: var(--font-size);
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: var(--spaccing1);
+
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    padding: var(--spaccing1);
+    border: 1px solid var(--medium-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+
+    --stagger-delay: 100ms;
+    animation-delay: var(--stagger-delay);
+    animation: cardEntrance 600ms ease-out;
+    animation-fill-mode: backwards;
+    animation-iteration-count: 1;
+}
+
+@keyframes cardEntrance {
+    from {
+        opacity: 0;
+        transform: scale(0.1) skew(55deg, 10deg) rotate(25deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) skew(0deg, 0deg) rotate(0deg);
+    }
+}
+
+/* .cards:nth-child(odd) {
+    animation-delay: calc(2 * var(--stagger-delay));
+}
+
+.cards:nth-child(even) {
+    animation-delay: calc(4 * var(--stagger-delay));
+} */
+.card h1,
+.card h2,
+.card h3,
+.card h4 {
+    color: var(--light-color);
+    text-transform: capitalize;
+    --text-shadow-card: -2px 2px 4px var(--dark-color);
+    text-shadow: var(--text-shadow-card);
+}
+
+.card h1 {
+    font-size: var(--font-size3);
+}
+
+.card h2 {
+    font-size: var(--font-size2);
+}
+
+.card h3 {
+    font-size: var(--font-size1);
+}
+
+.card h4 {
+    font-size: var(--font-size);
+}
+
+.card-main {
+    color: var(--light-color);
+    font-size: var(--font-size);
+}
+
+.card .link-button {
+    background-color: var(--medium-color);
+    color: var(--dark-color);
+}
+
+.show-card {
+    width: 70%;
+    margin: 15vh auto;
+}
