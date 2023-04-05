@@ -1,144 +1,38 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,700;0,900;1,100&display=swap');
-
 :root {
-    --primary-color: hsla(240, 2%, 26%, 0.982);
-    --secondary-color: hsla(28, 96%, 63%, 0.993);
-    --medium-color: hsla(180, 1%, 84%, 0.886);
-    --dark-color: hsla(180, 8%, 5%, 0.798);
-    --light-color: hsla(180, 17%, 98%, 0.916);
-    --warning-color: hsla(354, 77%, 58%, 0.916);
-
-    --fontfamily-text: 'Roboto', sans-serif;
-    --fontfamily-title: 'Poppins', sans-serif;
-
-    --spaccing: 0.5rem;
-    --spaccing1: calc(var(--spaccing) * 1.6);
-    --spaccing2: calc(var(--spaccing) * 2);
-    --spaccing3: calc(var(--spaccing) * 2.6);
-
-    --border-radius: 0.5rem;
-
-    --font-size: 0.8rem;
-    --font-size1: calc(var(--font-size) * 1.2);
-    --font-size2: calc(var(--font-size) * 1.6);
-    --font-size3: calc(var(--font-size) * 2);
-    --font-size4: calc(var(--font-size) * 2.4);
-
-    --box-shadow: -2px 2px 7px var(--primary-color);
-    --text-shadow: -2px 2px 4px var(--medium-color);
-    --section-max-width: 65ch;
-    --header-min-height: 250px;
-
-    scroll-behavior: smooth;
+    --navbar_height: clamp(5rem, 8vh, 9rem);
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.logo {
+    width: clamp(4rem, 5vw, 6rem);
 }
 
-body {
-    line-height: 150%;
-    font-family: var(--fontfamily-text);
-    font-size: var(--font-size1);
-    color: var(--dark-color);
-    width: 100%;
-    margin: auto;
-    padding: var(--spaccing3);
+.hero {
+    background-color: #201d1d;
+    background-position: center;
+    background-size: cover;
 }
 
-h1,
-h2,
-h3 {
-    font-family: var(--fontfamily-title);
-    color: var(--primary-color);
-    padding-block-end: var(--spaccing2);
-    text-shadow: var(--text-shadow);
+.extend {
+    grid-template-columns: auto clamp(5.4rem, 8vw, 9rem);
 }
 
-h1 {
-    font-size: var(--font-size4);
+#index-receipe,
+#show-receipe,
+#edit-receipe {
+    --stagger-delay: 100ms;
+    animation: 300ms FadeInAnimation var(--stagger-delay) ease-out;
+    animation-fill-mode: backwards;
+    animation-iteration-count: 1;
 }
 
-h2 {
-    font-size: var(--font-size3);
-}
+@keyframes FadeInAnimation {
+    from {
+        opacity: 0.3;
+        transform: scale(0);
+    }
 
-h3 {
-    font-size: var(--font-size2);
-}
-
-h4 {
-    font-size: var(--font-size1);
-}
-
-.link-button,
-button {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    gap: var(--spaccing2);
-
-    cursor: pointer;
-    background-color: var(--secondary-color);
-    color: var(--light-color);
-
-    padding: var(--spaccing1);
-    margin-block-start: var(--spaccing2);
-
-    font-size: var(--font-size1);
-    text-decoration: none;
-    letter-spacing: 0.3rem;
-    border: 0px solid var(--medium-color);
-    border-radius: var(--border-radius);
-    box-shadow: var(--box-shadow);
-    font-weight: 600;
-    min-width: 9rem;
-    width: max-content;
-}
-
-.link-button {
-    padding: calc(var(--spaccing1)*0.88);
-}
-
-.link-button.home,
-button.Home {
-    background-color: var(--medium-color);
-    color: var(--dark-color);
-    align-self: flex-end;
-}
-
-
-.link-button:hover,
-button:hover {
-    filter: brightness(110%);
-}
-
-.link-button:active,
-button:active {
-    filter: brightness(90%);
-}
-
-.container-button {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    gap: var(--spaccing3);
-    padding: var(--spaccing1);
-}
-
-.container-button.head {
-    justify-content: flex-end;
-}
-
-.hide {
-    display: none;
-}
-
-.show {
-    display: block;
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }

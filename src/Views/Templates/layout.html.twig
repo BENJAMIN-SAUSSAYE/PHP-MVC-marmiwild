@@ -1,0 +1,46 @@
+{# layout.html.twig #}
+<!doctype html>
+<html lang="fr" data-theme="light">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %} MarmiWild - {% endblock %}</title>
+    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@1.*/css/pico.min.css">
+    <link rel="stylesheet" href="/assets/css/override_picocss.css" type="text/css">
+    <link rel="stylesheet" href="/assets/css/style.css" type="text/css">
+    <link rel="stylesheet" href="/assets/css/cards.css" type="text/css">
+    <link rel="stylesheet" href="/assets/css/navbar.css" type="text/css">
+    <link rel="stylesheet" href="/assets/css/error.css" type="text/css">
+    {% block stylesheet %}{% endblock %}
+    <link rel="icon" href="/assets/images/WildCodeSchool.ico">
+</head>
+
+<body>
+    <div data-theme="dark" class="hero">
+        {% block navbar %}
+        {% include 'Components/__navbar.html.twig' %}
+        {% endblock %}
+
+        {% block header %}
+        {% endblock %}
+    </div>
+    <main class="container">
+        {% block errors %}
+        {% endblock %}
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    {% block footer %}
+    <footer class="container">
+        &copy; Copyright 2023 by <a href="#">Benjamin Saussaye</a>.
+    </footer>
+    {% endblock %}
+
+    {% block javascript %}
+    {% endblock %}
+</body>
+
+</html>

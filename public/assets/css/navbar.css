@@ -1,0 +1,9 @@
+nav {
+    height: var(--navbar_height);
+}
+
+nav ul,
+nav a,
+[role="link"] {
+    --color: #ffffff;
+}

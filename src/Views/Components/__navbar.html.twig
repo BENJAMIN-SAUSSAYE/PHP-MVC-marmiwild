@@ -1,0 +1,30 @@
+<!-- NAVIGATION DU SITE-->
+<nav class="container-fluid">
+    <ul>
+        <li>
+            <a href="./" class="contrast" onclick="event.preventDefault()">
+                <img class="logo" src="assets/images/logo.svg" alt="Logo MarmiWild">
+                <strong class="secondary">
+                    MarmiWild
+                </strong>
+            </a>
+        </li>
+    </ul>
+    <ul>
+        <li><a href="/">Home</a></li>
+        {# <li><a href="/About">About</a></li> #}
+        <li>
+            <details role="list" dir="ltr">
+                <summary aria-haspopup="listbox" role="link">Recipe</summary>
+                <ul role="listbox">
+                    <li><a href="/add">Add</a></li>
+                    {#
+                    <li><a href="Articles">Articles</a></li>
+                    <li><a href="Projects">Projects</a></li>
+                    #}
+                </ul>
+            </details>
+        </li>
+
+    </ul>
+</nav>

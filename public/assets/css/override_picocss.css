@@ -1,0 +1,7 @@
+/* Pink Light scheme (Default) */
+/* Can be forced with data-theme="light" */
+[data-theme="light"],
+:root:not([data-theme="dark"]) {
+    --primary: #189dca;
+    --secondary: #211b1b;
+}
